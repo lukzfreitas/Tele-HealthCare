@@ -54,8 +54,8 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
         ageTxt = new javax.swing.JTextField();
         emailTxt = new javax.swing.JTextField();
         skypeTxt = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonBack = new javax.swing.JButton();
+        jButtonUpdateProfile = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -84,33 +84,33 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
         skypeTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add(skypeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 358, 200, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setText("<<Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonBack.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonBack.setText("<<Back");
+        jButtonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonBackActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 632, -1, -1));
+        add(jButtonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 632, -1, -1));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton2.setText("Update Profile");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonUpdateProfile.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonUpdateProfile.setText("Update Profile");
+        jButtonUpdateProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonUpdateProfileActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 485, -1, -1));
+        add(jButtonUpdateProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 485, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout cardLayout = (CardLayout)userProcessContainer.getLayout();
         cardLayout.previous(userProcessContainer);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonBackActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonUpdateProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateProfileActionPerformed
         // TODO add your handling code here:
         int age;
         try{
@@ -134,14 +134,14 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
         
          
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonUpdateProfileActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ageTxt;
     private javax.swing.JTextField emailTxt;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonBack;
+    private javax.swing.JButton jButtonUpdateProfile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

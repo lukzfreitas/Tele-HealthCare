@@ -45,9 +45,9 @@ public class PatientWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonBookAppointment = new javax.swing.JButton();
+        jButtonCheckAppointment = new javax.swing.JButton();
+        jButtonCreateProfile = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -60,64 +60,64 @@ public class PatientWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2.setText("jLabel2");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 93, 219, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jButton1.setText("Book Appointment");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonBookAppointment.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButtonBookAppointment.setText("Book Appointment");
+        jButtonBookAppointment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonBookAppointmentActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 499, 200, -1));
+        add(jButtonBookAppointment, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 499, 200, -1));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jButton2.setText("Check Appointment");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCheckAppointment.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButtonCheckAppointment.setText("Check Appointment");
+        jButtonCheckAppointment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonCheckAppointmentActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 564, 200, -1));
+        add(jButtonCheckAppointment, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 564, 200, -1));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jButton3.setText("Create Profile");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCreateProfile.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButtonCreateProfile.setText("Create Profile");
+        jButtonCreateProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonCreateProfileActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 427, 200, -1));
+        add(jButtonCreateProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 427, 200, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonBookAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBookAppointmentActionPerformed
         // TODO add your handling code here:
         BookAppointmentJPanel panel = new BookAppointmentJPanel(userProcessContainer, userAccount, organization, enterprise);
         userProcessContainer.add("BookAppointmentJPanel", panel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonBookAppointmentActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonCheckAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCheckAppointmentActionPerformed
         // TODO add your handling code here:
         CheckStatusJPanel panel = new CheckStatusJPanel(userProcessContainer, userAccount);
         userProcessContainer.add("CheckStatusJPanel", panel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonCheckAppointmentActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonCreateProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateProfileActionPerformed
         // TODO add your handling code here:
         CreateProfileJPanel panel = new CreateProfileJPanel(userProcessContainer, userAccount, organization, enterprise);
         userProcessContainer.add("CreateProfileJPanel", panel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButtonCreateProfileActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonBookAppointment;
+    private javax.swing.JButton jButtonCheckAppointment;
+    private javax.swing.JButton jButtonCreateProfile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

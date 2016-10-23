@@ -12,6 +12,7 @@ import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AppointmentWorkRequest;
 import Business.WorkQueue.WorkRequest;
+import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -72,12 +73,12 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
         doctorCombo = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
         dateChooser = new com.toedter.calendar.JDateChooser();
-        jButton1 = new javax.swing.JButton();
+        jButtonBookAppointment = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         workRequestJTable = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonBack = new javax.swing.JButton();
+        jButtonPopulateRequestTable = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -103,14 +104,14 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
         dateChooser.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add(dateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 160, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setText("Book Appointment");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonBookAppointment.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonBookAppointment.setText("Book Appointment");
+        jButtonBookAppointment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonBookAppointmentActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 230, -1));
+        add(jButtonBookAppointment, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 230, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Check Request Status");
@@ -146,30 +147,33 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 455, 590, 97));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setText("<<Back");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonBack.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonBack.setText("<<Back");
+        jButtonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonBackActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 622, -1, -1));
+        add(jButtonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 622, -1, -1));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton2.setText("Refresh");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPopulateRequestTable.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonPopulateRequestTable.setText("Refresh");
+        jButtonPopulateRequestTable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonPopulateRequestTableActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, 120, -1));
+        add(jButtonPopulateRequestTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, 120, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        userProcessContainer.remove(this);
+        CardLayout cardLayout = (CardLayout)userProcessContainer.getLayout();
+        cardLayout.previous(userProcessContainer);
+    }//GEN-LAST:event_jButtonBackActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonBookAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBookAppointmentActionPerformed
         // TODO add your handling code here:
         
         Employee doctor = (Employee)doctorCombo.getSelectedItem();
@@ -198,12 +202,12 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
         }
         
         populateRequestTable();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonBookAppointmentActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonPopulateRequestTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPopulateRequestTableActionPerformed
         // TODO add your handling code here:
         populateRequestTable();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonPopulateRequestTableActionPerformed
 
     public void populateRequestTable(){
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
@@ -227,9 +231,9 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.toedter.calendar.JDateChooser dateChooser;
     private javax.swing.JComboBox doctorCombo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonBack;
+    private javax.swing.JButton jButtonBookAppointment;
+    private javax.swing.JButton jButtonPopulateRequestTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
