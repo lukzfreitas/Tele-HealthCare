@@ -79,7 +79,7 @@ public class PatientWorkAreaJPanel extends javax.swing.JPanel {
         add(jButtonCheckAppointment, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 564, 200, -1));
 
         jButtonCreateProfile.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jButtonCreateProfile.setText("Create Profile");
+        jButtonCreateProfile.setText("Update Profile");
         jButtonCreateProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateProfileActionPerformed(evt);
