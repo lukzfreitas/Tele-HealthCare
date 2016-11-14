@@ -54,6 +54,11 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
         jLabel4.setText("Enter Skype ID");
 
         ageTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ageTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ageTxtActionPerformed(evt);
+            }
+        });
 
         emailTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
@@ -153,6 +158,10 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
             return;
         }
     }//GEN-LAST:event_jButtonUpdateProfileActionPerformed
+
+    private void ageTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ageTxtActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ageTxt;
