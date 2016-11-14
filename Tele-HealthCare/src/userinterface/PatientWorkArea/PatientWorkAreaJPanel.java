@@ -50,15 +50,12 @@ public class PatientWorkAreaJPanel extends javax.swing.JPanel {
         jButtonCreateProfile = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setText("Patient Work Area");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 16, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/PatientWorkArea/patient.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 93, 219, -1));
 
         jButtonBookAppointment.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonBookAppointment.setText("Book Appointment");
@@ -67,7 +64,6 @@ public class PatientWorkAreaJPanel extends javax.swing.JPanel {
                 jButtonBookAppointmentActionPerformed(evt);
             }
         });
-        add(jButtonBookAppointment, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 499, 200, -1));
 
         jButtonCheckAppointment.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonCheckAppointment.setText("Check Appointment");
@@ -76,7 +72,6 @@ public class PatientWorkAreaJPanel extends javax.swing.JPanel {
                 jButtonCheckAppointmentActionPerformed(evt);
             }
         });
-        add(jButtonCheckAppointment, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 564, 200, -1));
 
         jButtonCreateProfile.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonCreateProfile.setText("Update Profile");
@@ -85,7 +80,36 @@ public class PatientWorkAreaJPanel extends javax.swing.JPanel {
                 jButtonCreateProfileActionPerformed(evt);
             }
         });
-        add(jButtonCreateProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 427, 200, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButtonCreateProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonBookAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonCheckAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonCreateProfile)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonBookAppointment)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonCheckAppointment)
+                .addContainerGap())
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonBookAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBookAppointmentActionPerformed

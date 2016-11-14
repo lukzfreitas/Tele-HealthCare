@@ -41,32 +41,23 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
         jButtonBack = new javax.swing.JButton();
         jButtonUpdateProfile = new javax.swing.JButton();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setText("Update Patient Profile");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 16, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Enter Age");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 204, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Enter Email-ID");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 276, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Enter Skype ID");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 359, -1, -1));
 
         ageTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(ageTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 204, 200, -1));
 
         emailTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 275, 200, -1));
 
         skypeTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(skypeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 358, 200, -1));
 
         jButtonBack.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonBack.setText("<<Back");
@@ -75,7 +66,6 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
                 jButtonBackActionPerformed(evt);
             }
         });
-        add(jButtonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 632, -1, -1));
 
         jButtonUpdateProfile.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonUpdateProfile.setText("Update Profile");
@@ -84,7 +74,54 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
                 jButtonUpdateProfileActionPerformed(evt);
             }
         });
-        add(jButtonUpdateProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 485, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonBack)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(81, 81, 81)
+                        .addComponent(ageTxt))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(skypeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonUpdateProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(809, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(ageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(skypeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButtonUpdateProfile)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonBack)
+                .addContainerGap(418, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
