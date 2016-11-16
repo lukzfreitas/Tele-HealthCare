@@ -13,7 +13,7 @@ public class UserAccountTest {
     
     @Test
     public void testUserName() {
-        UserAccount ua = new UserAccount();
+        UserAccountReplicated ua = new UserAccountReplicated();
         String actual = ua.getUsername();
         String expected = "bruno";
         assertEquals(expected, actual);
