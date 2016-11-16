@@ -119,7 +119,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel1.add(logoutJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 50, 100, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/LOGO5.jpg"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, -1));
 
         jSplitPane1.setTopComponent(jPanel1);
 
