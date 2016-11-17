@@ -136,6 +136,15 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
         cardLayout.previous(userProcessContainer);
     }//GEN-LAST:event_jButtonBackActionPerformed
 
+    /*@ requires age > 0 && age < 150;
+      @ ensures userAccount.getEmployee().getAge() == \old(userAccount.getEmployee().getAge()) + age;
+      @ also
+      @ requires !emailTxt.getText().equals(""); 
+      @ ensures userAccount.getEmploye().getEmail().equals(emailTxt.getText());
+      @ also
+      @ requires !skypeTxt.getText().equals("");
+      @ ensures userAccount.getEmployee().getSkypeId().equals(skypeTxt.getText());
+    @*/
     private void jButtonUpdateProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateProfileActionPerformed
 
         int age;

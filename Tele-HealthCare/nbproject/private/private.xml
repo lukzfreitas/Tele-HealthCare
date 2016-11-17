@@ -1,29 +1,9 @@
-<<<<<<< Updated upstream
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
-    </open-files>
-</project-private>
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/Business/EcoSystem.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/Business/Organization/Organization.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/persistence/EmployeeDao.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/Business/UserAccount/UserAccountDirectory.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/userinterface/SystemAdminWorkArea/ManageEnterpriseAdminJPanel.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/Business/Role/Role.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/persistence/UserAccountDao.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/userinterface/MainJFrame.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/Business/Role/PatientRole.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/userinterface/AdministratorWorkArea/ManageUserAccountJPanel.java</file>
-            <file>file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/src/Business/UserAccount/UserAccount.java</file>
+            <file>file:/C:/Users/DELL/Documents/PUCRS/Técnicas%20de%20programação/Trabalho%20Final/Tele-HealthCare/Tele-HealthCare/src/userinterface/PatientWorkArea/CreateProfileJPanel.java</file>
         </group>
     </open-files>
 </project-private>
->>>>>>> Stashed changes
