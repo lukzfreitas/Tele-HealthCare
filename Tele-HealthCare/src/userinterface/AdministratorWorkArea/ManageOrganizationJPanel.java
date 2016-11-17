@@ -109,7 +109,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             organizationJTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 580, 190));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 570, 170));
 
         addJButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         addJButton.setText("Add Department");
@@ -118,14 +118,14 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                 addJButtonActionPerformed(evt);
             }
         });
-        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, -1, -1));
+        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, -1, -1));
 
         organizationJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 140, -1));
+        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 140, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Department Type ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
 
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         backJButton.setText("<< Back");
@@ -134,7 +134,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 603, -1, -1));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel2.setText("Manage Departments");
@@ -142,11 +142,11 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Choose Department");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("View Departments In The Enterprise");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, -1, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed

@@ -7,12 +7,14 @@ package userinterface.AdministratorWorkArea;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
+import Business.Organization.PatientOrganization;
 import Business.Role.Role;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import static org.mozilla.javascript.ScriptRuntime.instanceOf;
 
 /**
  *
@@ -65,13 +67,17 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-            for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
-                Object row[] = new Object[2];
-                row[0] = ua;
-                row[1] = ua.getRole();
-                ((DefaultTableModel) userJTable.getModel()).addRow(row);
-            }
+        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {            
+            //TODO: Verificar o pq da repetição da lista ao exibir
+//            if(organization instanceof PatientOrganization) {
+                for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
+                    Object row[] = new Object[2];
+                    row[0] = ua;
+                    row[1] = ua.getRole();
+                    ((DefaultTableModel) userJTable.getModel()).addRow(row);
+                }
+//            }
+            
         }
     }
 
@@ -110,14 +116,14 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
                 createUserJButtonActionPerformed(evt);
             }
         });
-        add(createUserJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 210, -1, -1));
+        add(createUserJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, -1, -1));
 
         nameJTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 146, -1));
+        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 146, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("User Name");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
 
         userJTable.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         userJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -149,21 +155,21 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             userJTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 540, 179));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 540, 130));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Password");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, -1, -1));
 
         passwordJTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, 146, -1));
+        add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 146, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Employee");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, -1));
 
         employeeJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(employeeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, 146, -1));
+        add(employeeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, 146, -1));
 
         backjButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         backjButton1.setText("<< Back");
@@ -172,11 +178,11 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
                 backjButton1ActionPerformed(evt);
             }
         });
-        add(backjButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 680, 112, -1));
+        add(backjButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 520, 112, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setText("Organization");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, -1));
 
         organizationJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -184,14 +190,14 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
                 organizationJComboBoxActionPerformed(evt);
             }
         });
-        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, 146, -1));
+        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, 146, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Role");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, -1, -1));
 
         roleJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 146, -1));
+        add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 146, -1));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel6.setText("Manage User Accounts");
@@ -199,7 +205,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setText("View Users In The Departments");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
@@ -210,12 +216,19 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             return;
         }
         
+        
+        
         Organization organization = (Organization) organizationJComboBox.getSelectedItem();
         Employee employee = (Employee) employeeJComboBox.getSelectedItem();
         Role role = (Role) roleJComboBox.getSelectedItem();
         
-        organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
+        if(organization.getUserAccountDirectory().checkIfUsernameIsUnique(userName)){
+            JOptionPane.showMessageDialog(null, "Username already exists");
+            return;
+        }
         
+        organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);    
+        // Atualiza o tableModel na primeira com o novo user
         popData();
     }//GEN-LAST:event_createUserJButtonActionPerformed
 

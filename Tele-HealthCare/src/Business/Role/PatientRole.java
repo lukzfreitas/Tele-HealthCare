@@ -21,9 +21,22 @@ import userinterface.PatientWorkArea.PatientWorkAreaJPanel;
 public class PatientRole extends Role{
 
     @Override
-    public JPanel createWorkArea(JPanel container, JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+    public JPanel createWorkArea(
+            JPanel container, 
+            JPanel userProcessContainer, 
+            UserAccount account, 
+            Organization organization, 
+            Enterprise enterprise, 
+            EcoSystem business
+    ) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return new PatientWorkAreaJPanel(container, userProcessContainer, account, (PatientOrganization)organization, enterprise);
+        return new PatientWorkAreaJPanel(
+                container, 
+                userProcessContainer, 
+                account, 
+                (PatientOrganization)organization, 
+                enterprise
+        );
     }
     
     @Override 

@@ -3,6 +3,7 @@ package Business;
 import Business.Employee.Employee;
 import Business.Role.SystemAdminRole;
 import Business.UserAccount.UserAccount;
+import persistence.InitializeDataSource;
 
 /**
  *
@@ -10,9 +11,9 @@ import Business.UserAccount.UserAccount;
  */
 public class ConfigureASystem {
     
-    public static EcoSystem configure(){
+    public static EcoSystem configure() throws Exception {
         
-        EcoSystem system = EcoSystem.getInstance();
+        EcoSystem system = EcoSystem.getInstance();                
         
         //Create a network
         //create an enterprise

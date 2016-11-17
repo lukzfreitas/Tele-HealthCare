@@ -8,6 +8,8 @@ import Business.Employee.Employee;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import java.awt.CardLayout;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -119,7 +121,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             organizationJTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 580, 150));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 580, 120));
 
         addJButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         addJButton.setText("Create Employee");
@@ -128,7 +130,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 addJButtonActionPerformed(evt);
             }
         });
-        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, -1, -1));
+        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, -1, 30));
 
         organizationJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -136,11 +138,11 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 organizationJComboBoxActionPerformed(evt);
             }
         });
-        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, 130, -1));
+        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 130, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Department");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, -1, 20));
 
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         backJButton.setText("<< Back");
@@ -149,33 +151,33 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 640, -1, -1));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, -1, 30));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Name");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 80, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 80, 20));
 
         nameJTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 240, -1));
+        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 240, 30));
 
         organizationEmpJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(organizationEmpJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 230, -1));
+        add(organizationEmpJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 230, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Organization");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, -1, 20));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel4.setText("Manage Employees");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, 40));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("Add Employee");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, 20));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("View Employees in Organization");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, -1, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
@@ -187,7 +189,11 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Employee name is empty");
             return;
         }
-        organization.getEmployeeDirectory().createEmployee(name);
+        try {
+            organization.getEmployeeDirectory().createEmployee(name);
+        } catch (Exception ex) {
+            Logger.getLogger(ManageEmployeeJPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         populateTable(organization);
         

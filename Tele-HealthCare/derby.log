@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Nov 16 23:48:17 BRST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-0158-6ff8-5d40-0000037cebb8 
+on database directory C:\Users\Lucas\OneDrive\Documentos\PUCRS\Tele-HealthCare\Tele-HealthCare\DBTeleHealthCare with class loader sun.misc.Launcher$AppClassLoader@4769b07b 
+Loaded from file:/C:/Users/Lucas/OneDrive/Documentos/PUCRS/Tele-HealthCare/Tele-HealthCare/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_60-b27
+user.dir=C:\Users\Lucas\OneDrive\Documentos\PUCRS\Tele-HealthCare\Tele-HealthCare
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

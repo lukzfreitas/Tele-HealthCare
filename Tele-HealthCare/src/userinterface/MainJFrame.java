@@ -14,9 +14,12 @@ import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Toolkit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
+import persistence.InitializeDataSource;
 
 /**
  *
@@ -30,7 +33,7 @@ public class MainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainJFrame
      */
-    public MainJFrame() {
+    public MainJFrame() throws Exception {
        
         this.setUndecorated(true);
         
@@ -260,8 +263,12 @@ public class MainJFrame extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainJFrame().setVisible(true);
+            public void run() {                
+                try {
+                    new MainJFrame().setVisible(true);
+                } catch (Exception ex) {
+                    Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

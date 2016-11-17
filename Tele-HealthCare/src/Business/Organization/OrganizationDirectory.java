@@ -6,6 +6,8 @@ package Business.Organization;
 
 import Business.Organization.Organization.Type;
 import java.util.ArrayList;
+import persistence.InitializeDataSource;
+import persistence.PatientOrganizationDao;
 
 /**
  *
@@ -21,9 +23,14 @@ public class OrganizationDirectory {
 
     public ArrayList<Organization> getOrganizationList() {
         return organizationList;
+    }   
+    
+    public ArrayList<Organization> getPatientOrganizationList() {
+        PatientOrganizationDao patientOrganizationDao = new PatientOrganizationDao();
+        return patientOrganizationDao.findAll();
     }
     
-    public Organization createOrganization(Type type){
+    public Organization createOrganization(Type type) {
         Organization organization = null;
         if (type.getValue().equals(Type.Doctor.getValue())){
             organization = new DoctorOrganization();
@@ -46,7 +53,10 @@ public class OrganizationDirectory {
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Type.Patient.getValue())){
-            organization = new PatientOrganization();
+            organization = new PatientOrganization();            
+            PatientOrganizationDao patientOrganizationDao =
+                new PatientOrganizationDao();
+            patientOrganizationDao.insert(organization);
             organizationList.add(organization);
         }
         return organization;

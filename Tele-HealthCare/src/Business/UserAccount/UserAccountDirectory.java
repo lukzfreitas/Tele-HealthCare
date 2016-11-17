@@ -7,6 +7,7 @@ package Business.UserAccount;
 import Business.Employee.Employee;
 import Business.Role.Role;
 import java.util.ArrayList;
+import persistence.UserAccountDao;
 
 /**
  *
@@ -15,12 +16,15 @@ import java.util.ArrayList;
 public class UserAccountDirectory {
     
     private ArrayList<UserAccount> userAccountList;
+    private ArrayList<UserAccount> userAccountListDB;
 
     public UserAccountDirectory() {
         userAccountList = new ArrayList<>();
     }
 
     public ArrayList<UserAccount> getUserAccountList() {
+        UserAccountDao userAccountDao = new UserAccountDao();
+        userAccountListDB = userAccountDao.findAll();
         return userAccountList;
     }
     
@@ -32,21 +36,23 @@ public class UserAccountDirectory {
         return null;
     }
     
-    public UserAccount createUserAccount(String username, String password, Employee employee, Role role){
+    public UserAccount createUserAccount(String username, String password, Employee employee, Role role){        
         UserAccount userAccount = new UserAccount();
+        UserAccountDao userAccountDao = new UserAccountDao();
         userAccount.setUsername(username);
         userAccount.setPassword(password);
         userAccount.setEmployee(employee);
         userAccount.setRole(role);
+        userAccountDao.insert(userAccount);
         userAccountList.add(userAccount);
         return userAccount;
     }
     
-    public boolean checkIfUsernameIsUnique(String username){
-        for (UserAccount ua : userAccountList){
+    public boolean checkIfUsernameIsUnique(String username){                
+        for (UserAccount ua : userAccountList){            
             if (ua.getUsername().equals(username))
-                return false;
+                return true;
         }
-        return true;
+        return false;
     }
 }

@@ -21,7 +21,7 @@ public abstract class Organization {
     private EmployeeDirectory employeeDirectory;
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
-    private static int counter;
+    private static int counter = 1;
     
     public enum Type{
         Admin("Admin Organization"), Doctor("Doctor Organization"), Lab("Lab TechOrganization"), Receptionist("Receptionist Organization"),
@@ -41,8 +41,8 @@ public abstract class Organization {
         workQueue = new WorkQueue();
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
-        organizationID = counter;
-        ++counter;
+//        organizationID = counter;
+//        ++counter;
     }
 
     public abstract ArrayList<Role> getSupportedRole();
@@ -69,6 +69,10 @@ public abstract class Organization {
 
     public void setName(String name) {
         this.name = name;
+    }
+    
+    public void setId(int id) {
+        this.organizationID = id;
     }
 
     public void setWorkQueue(WorkQueue workQueue) {

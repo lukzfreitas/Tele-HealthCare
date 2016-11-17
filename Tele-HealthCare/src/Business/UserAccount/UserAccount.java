@@ -2,6 +2,7 @@ package Business.UserAccount;
 
 import Business.Employee.Employee;
 import Business.Role.Role;
+import Business.Role.Role.RoleType;
 import Business.WorkQueue.WorkQueue;
 
 /**
@@ -10,17 +11,20 @@ import Business.WorkQueue.WorkQueue;
  */
 public class UserAccount {
     
+    private int id;
     private String username;
     private String password;
     private Employee employee;
-    private Role role;
+    private static Role role;
     private WorkQueue workQueue;
 
     public UserAccount() {
         workQueue = new WorkQueue();
     }
     
-    
+    public UserAccount(int id) {
+        this.id = id;                
+    }
     
     public String getUsername() {
         return username;
@@ -53,12 +57,15 @@ public class UserAccount {
     public Employee getEmployee() {
         return employee;
     }
+    
+    
+    public int getId() {
+        return id;
+    }
 
     public WorkQueue getWorkQueue() {
         return workQueue;
-    }
-
-    
+    }   
     
     @Override
     public String toString() {
