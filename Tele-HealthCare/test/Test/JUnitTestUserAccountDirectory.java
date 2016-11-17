@@ -25,7 +25,7 @@ public class JUnitTestUserAccountDirectory {
         userAccountDirectory.createUserAccount("Bruno", "123456", employee, new AdminRole());
         
         boolean actual = userAccountDirectory.checkIfUsernameIsUnique("Bruno");
-        boolean expected = false;
+        boolean expected = true;
         assertEquals(expected, actual);
     }
     
@@ -36,7 +36,7 @@ public class JUnitTestUserAccountDirectory {
         userAccountDirectory.createUserAccount("Bruno", "123456", employee, new AdminRole());
         
         boolean actual = userAccountDirectory.checkIfUsernameIsUnique("Pelé");
-        boolean expected = true;
+        boolean expected = false;
         assertEquals(expected, actual);
     }
     
