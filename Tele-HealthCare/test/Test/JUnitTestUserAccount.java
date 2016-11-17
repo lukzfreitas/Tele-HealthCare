@@ -10,12 +10,12 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Pellisoli
+ * @author Pellisoli Beretta
  */
 public class JUnitTestUserAccount {
     
     @Test
-    public void NovoEmptyJUnitTest() {
+    public void userNameValidTest() {
         UserAccount ua = new UserAccount();
         ua.setUsername("bruno");
         String actual = ua.getUsername();

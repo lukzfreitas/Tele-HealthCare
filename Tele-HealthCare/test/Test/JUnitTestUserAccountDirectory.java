@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Pellisoli
+ * @author Pellisoli Beretta
  */
 public class JUnitTestUserAccountDirectory {
     
