@@ -1,18 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package Business.Employee;
 
 import java.util.ArrayList;
 import persistence.EmployeeDao;
 import persistence.InitializeDataSource;
 
-
-/**
- *
- * @author Neelu
- */
 public class EmployeeDirectory {
     
     private ArrayList<Employee> employeeList;
@@ -23,7 +14,7 @@ public class EmployeeDirectory {
     }
 
     /**
-     * recupera a lista de employees do banco
+     * Recupera a lista de employees do banco
      * @return 
      */
     public ArrayList<Employee> getEmployeeList() {               

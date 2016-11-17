@@ -1,15 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package Business.Employee;
 
 import Business.MedicalRecords.MedicalRecord;
 
-/**
- *
- * @author Neelu
- */
 public class Employee {
     
     private String name;
@@ -99,6 +91,4 @@ public class Employee {
     public String toString() {
         return name;
     }
-    
-    
 }
