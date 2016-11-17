@@ -154,11 +154,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private void userNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameJTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_userNameJTextFieldActionPerformed
-    /*@
-    @ requires !userNameJTextField.getText().equals("");
-    @ also
-    @ requires !passwordField.getPassword().equals('');
-    @*/
     private void loginJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJButtonActionPerformed
         // Get user name
         String userName = userNameJTextField.getText();

@@ -18,7 +18,6 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateProfileJPanel
      */
-
     public CreateProfileJPanel(JPanel upc, UserAccount ua, Organization o, Enterprise e) {
         initComponents();
         userProcessContainer = upc;
@@ -132,10 +131,9 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
 
         userProcessContainer.remove(this);
-        CardLayout cardLayout = (CardLayout)userProcessContainer.getLayout();
+        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         cardLayout.previous(userProcessContainer);
     }//GEN-LAST:event_jButtonBackActionPerformed
-
     /*@ requires age > 0 && age < 150;
       @ ensures userAccount.getEmployee().getAge() == \old(userAccount.getEmployee().getAge()) + age;
       @ also
@@ -148,22 +146,28 @@ public class CreateProfileJPanel extends javax.swing.JPanel {
     private void jButtonUpdateProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateProfileActionPerformed
 
         int age;
-        try{
-            age=Integer.parseInt(ageTxt.getText());
-            
+        try {
+
+            do {
+                age = Integer.parseInt(ageTxt.getText());
+                if (age <= 0 || age >=120) {
+                    JOptionPane.showMessageDialog(this, "Idade inválida", "Atenção", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+            } while (age < 0);
             userAccount.getEmployee().setAge(Integer.parseInt(ageTxt.getText()));
-            if(emailTxt.getText().trim().isEmpty() || skypeTxt.getText().trim().isEmpty()){
-                 JOptionPane.showMessageDialog(null,"Email or Skype Id missing!");
-                 return;
+            if (emailTxt.getText().trim().isEmpty() || skypeTxt.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Email or Skype Id missing!");
+                return;
             }
-            
-        userAccount.getEmployee().setEmail(emailTxt.getText());
-        userAccount.getEmployee().setSkypeId(skypeTxt.getText());
-        
-        JOptionPane.showMessageDialog(null,"Patient Profile Successfully Updated!");
-        
-        }catch(NumberFormatException e){
-            JOptionPane.showMessageDialog(null,"Please enter a valid Number!");
+
+            userAccount.getEmployee().setEmail(emailTxt.getText());
+            userAccount.getEmployee().setSkypeId(skypeTxt.getText());
+
+            JOptionPane.showMessageDialog(null, "Patient Profile Successfully Updated!");
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid Number!");
             return;
         }
     }//GEN-LAST:event_jButtonUpdateProfileActionPerformed
